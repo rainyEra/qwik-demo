@@ -1,0 +1,16 @@
+.app {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 21px;
+}
+
+.app p {
+  display: flex;
+  justify-content: center;
+}
+.active {
+  background-color: aqua;
+}

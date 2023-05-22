@@ -10,11 +10,14 @@ export default component$(() => {
       { name: "Jerry", active: false, key: crypto.randomUUID() },
       { name: "Noah", active: true, key: crypto.randomUUID() },
     ],
-    activate: $(function (target: number, value: boolean) {
+    activate: $(function (this: any, target: number, value: boolean) {
       this.list[target].active = value;
       console.log(this.list[target]);
     }),
-    addMore: $(function (item) {
+    addMore: $(function (
+      this: { list: { name: string; active: boolean; key: string }[] },
+      item: any
+    ) {
       this.list.push(item);
       console.log(this.list);
     }),
